@@ -1,0 +1,89 @@
+// barname-e benevisid ke 100 addad ra daryaft karde va bozorgtarine onha ra namayesh dahad.
+#include <iostream>
+using namespace std;
+int main(){
+    int i;
+    int arr[100];
+    // zakire addad vared shode tavasote karbar.
+    for (i=0;i<100;i++){
+        cout << "addad " << i+1 << " ra vared konid : " << endl;
+        cin >> arr[i] ;
+    }
+    // halghe baraye zakhire Max dar arr[0].
+    for (i=1;i<100;i++){
+        if (arr[0] < arr[i])
+            arr[0] = arr[i];
+    }
+    cout << "bozorg tarin addad = " << arr[0] << endl;
+return 0; }
+
+
+
+
+
+
+
+
+
+// Tamrin: Barname-e Benevisid ke 3 addad ra daryaft karde va bozorgtarin va
+// kochektarin onha ra neshan dahad.
+#include <iostream>
+using namespace std;
+int main (){
+    int A,B,C;
+    cout<<"enter the first num";
+    cin >> A;
+    cout << "enter the second num.";
+    cin >> B;
+    cout <<"enter the Third number.";
+    cin >> C;
+    if (A > B && A > C)
+        cout << "A is the Biggest.\t";
+    if (B > A && B > C)
+        cout << "B is the Biggest.\t";
+    if (C > A && C > B)
+        cout << "C is the Biggest.\t";
+    if (A < B && A < C)
+        cout << "A is the Smallest.";
+    if (B < A && B < C)
+        cout << "B is the Smallest.";
+    if (C < A && C < B)
+        cout << "C is the Smallest.";
+    if (A == B && A == C)
+        cout << "All Numbers have the same value.";
+    return 0;
+}
+
+
+
+
+
+
+/barname benevisid ke tamam aadad aval beyn do addad ra chap konad
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a, b, i, j, flag;
+    cout << "Enter the first num : ";
+    cin >> a;
+    cout << "Enter the second num : ";
+    cin >> b;
+    cout << "Prime numbers between " << a << " and " << b
+         << " are: ";
+    for (i = a; i <= b; i++) {
+        if (i == 1 || i == 0)
+            continue;
+        flag = 1;
+
+        for (j = 2; j <= i / 2; j++) {
+            if (i % j == 0) {
+                flag = 0;
+                break;
+            }
+        }
+        if (flag == 1)
+            cout << i << " ";
+    }
+    return 0;
+}
